@@ -77,15 +77,6 @@ export const roles: Role[] = [
     ],
     stack: ["Teaching", "Statistics", "Calculus", "LaTeX"],
   },
-  {
-    org: "Edu-tainment",
-    title: "Founder & CEO",
-    period: "2020 — 2023",
-    kind: "Philanthropy · Education",
-    titleFirst: true,
-    points: [],
-    stack: [],
-  },
 
 ];
 
