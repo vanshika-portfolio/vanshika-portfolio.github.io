@@ -6,7 +6,7 @@ export function Experience() {
     <Section id="experience" label="" title="Professional Experience">
       <ol className="relative border-l border-border pl-6 sm:pl-10">
         {roles.map((role) => (
-          <li key={role.org} className="relative pb-12 last:pb-0">
+          <li key={role.org} className="relative pb-9 last:pb-0">
             <span
               aria-hidden
               className="absolute top-[10px] -left-[calc(1.5rem+4.5px)] h-[9px] w-[9px] rounded-full bg-gold sm:-left-[calc(2.5rem+4.5px)]"

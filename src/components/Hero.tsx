@@ -3,7 +3,7 @@ import { metrics, profile } from "@/data/portfolio";
 
 export function Hero() {
   return (
-    <section id="top" className="relative mx-auto max-w-6xl px-5 pt-32 pb-16 sm:px-8 sm:pt-40 sm:pb-20">
+    <section id="top" className="relative mx-auto max-w-6xl px-5 pt-32 pb-10 sm:px-8 sm:pt-40 sm:pb-12">
       <p className="rule-label rise flex items-center gap-2">
         <MapPin className="size-3.5" strokeWidth={1.8} />
         {profile.location}
@@ -67,7 +67,7 @@ export function Hero() {
         </a>
       </div>
 
-      <dl className="rise mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-4">
+      <dl className="rise mt-11 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-4">
         {metrics.map((m) => (
           <div key={m.label} className="panel border-0 px-5 py-6">
             <dd className="font-display text-3xl font-semibold tracking-tight text-gold-bright">{m.value}</dd>
