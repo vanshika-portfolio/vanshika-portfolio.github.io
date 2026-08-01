@@ -253,6 +253,10 @@ export const awards = [
   "Data Analysis Badge — UBC",
 ];
 
+// Add certificates here (name + issuer) and they appear beside the awards.
+export const certifications: { name: string; issuer: string }[] = [];
+
+
 export const education = {
   school: "UBC",
   track: "Co-op",
