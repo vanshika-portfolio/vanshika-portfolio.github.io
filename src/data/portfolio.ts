@@ -252,3 +252,10 @@ export const awards = [
   "Undergraduate Mathematics Award",
   "Data Analysis Badge — UBC",
 ];
+
+export const education = {
+  school: "UBC",
+  track: "Co-op",
+  degree: "Computer Science & Data Science",
+  honours: "4.33 / 4.33 GPA | Multi-Year Dean's Honour Roll",
+};
