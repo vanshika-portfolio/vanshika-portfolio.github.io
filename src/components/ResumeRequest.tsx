@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FileText, Loader2, ShieldCheck } from "lucide-react";
 import { useServerFn } from "@tanstack/react-start";
 import { submitResumeRequest } from "@/lib/resume.functions";
+import { submitResumeRequestFromBrowser } from "@/lib/resume-static";
+
 import {
   Dialog,
   DialogContent,
