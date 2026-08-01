@@ -4,7 +4,10 @@ export function BackgroundStage() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-background">
       {/* Slow parallax drift over the skyline */}
-      <div className="bg-layer" style={{ backgroundImage: `url(${bgCity})`, opacity: 1 }} />
+      <div
+        className="bg-layer"
+        style={{ backgroundImage: `url(${bgCity})`, opacity: 1, filter: "brightness(1.55) saturate(1.15)" }}
+      />
 
       {/* Drifting violet city glow — keeps the frame alive without distracting */}
       <div className="bg-glow" />
@@ -14,9 +17,10 @@ export function BackgroundStage() {
         className="fixed inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 88%) 0%, oklch(0.13 0.014 300 / 66%) 34%, oklch(0.13 0.014 300 / 82%) 72%, oklch(0.13 0.014 300 / 94%) 100%)",
+            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 46%) 0%, oklch(0.13 0.014 300 / 20%) 38%, oklch(0.13 0.014 300 / 38%) 72%, oklch(0.13 0.014 300 / 62%) 100%)",
         }}
       />
+
 
       <div
         className="fixed inset-0 opacity-[0.035]"
