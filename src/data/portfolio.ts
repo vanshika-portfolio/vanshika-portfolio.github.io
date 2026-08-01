@@ -226,14 +226,6 @@ export const projects: Project[] = [
     linkLabel: "Source",
   },
   {
-    title: "Automated Résumé and Portfolio Creator",
-    tag: "",
-    blurb: "Data mining pipeline for personalised résumé generation from messy data to real ",
-    stack: ["Docker", "Python", "Gemini"],
-    href: "https://github.com/PaintedW0lf/capstone-project-team-3-Data-Mining",
-    linkLabel: "Source",
-  },
-  {
     title: "Full stack Tutoring website",
     blurb: "Live tutoring platform with personalised sessions and resources.",
     stack: ["EdTech", "Tutoring"],
