@@ -181,6 +181,14 @@ export const projects: Project[] = [
   },
 
   {
+    title: "Automated Résumé and Portfolio Creator",
+    tag: "",
+    blurb: "Data mining pipeline for personalised résumé generation from messy data to real ",
+    stack: ["Docker", "Python", "Gemini"],
+    href: "https://github.com/PaintedW0lf/capstone-project-team-3-Data-Mining",
+    linkLabel: "Source",
+  },
+  {
     title: "Game of Amazons AI Bot",
     tag: "3rd of 23 teams",
     blurb: "Minimax with alpha-beta pruning and heuristic evaluation.",
@@ -223,14 +231,6 @@ export const projects: Project[] = [
     blurb: "Technology-sector ETF models from profitability and volatility analysis.",
     stack: ["Tableau", "Python", "Seaborn"],
     href: "https://github.com/PaintedW0lf/ETF_creation-Stock_Analysis",
-    linkLabel: "Source",
-  },
-  {
-    title: "Automated Résumé and Portfolio Creator",
-    tag: "",
-    blurb: "Data mining pipeline for personalised résumé generation from messy data to real ",
-    stack: ["Docker", "Python", "Gemini"],
-    href: "https://github.com/PaintedW0lf/capstone-project-team-3-Data-Mining",
     linkLabel: "Source",
   },
   {
