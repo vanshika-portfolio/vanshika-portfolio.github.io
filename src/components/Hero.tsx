@@ -67,7 +67,7 @@ export function Hero() {
         </a>
       </div>
 
-      <dl className="rise mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-4">
+      <dl className="rise mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-4">
         {metrics.map((m) => (
           <div key={m.label} className="panel border-0 px-5 py-6">
             <dd className="font-display text-3xl font-semibold tracking-tight text-gold-bright">{m.value}</dd>
