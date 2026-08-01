@@ -11,7 +11,7 @@ export function Timeline() {
   return (
     <Section
       id="timeline"
-      label="Timeline"
+      label="Experience"
       title="Experience"
     >
       <ol className="relative border-l border-border pl-6 sm:pl-8">
