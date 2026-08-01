@@ -1,23 +1,23 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
-export type SceneId = "noir" | "city" | "nature" | "aurora" | "blueprint";
+export type SceneId = "noir" | "peaks" | "mist" | "dunes" | "aurora";
 
 export const scenes: { id: SceneId; label: string; hint: string }[] = [
   { id: "noir", label: "Noir", hint: "Pure black" },
-  { id: "city", label: "City", hint: "Skyline at night" },
-  { id: "nature", label: "Ridge", hint: "Coastal mountains" },
-  { id: "aurora", label: "Aurora", hint: "Animated gradient" },
-  { id: "blueprint", label: "Blueprint", hint: "Technical lines" },
+  { id: "peaks", label: "Peaks", hint: "Violet mountain haze" },
+  { id: "mist", label: "Mist", hint: "Purple forest lake" },
+  { id: "dunes", label: "Dunes", hint: "Night desert sky" },
+  { id: "aurora", label: "Aurora", hint: "Animated violet gradient" },
 ];
 
-const STORAGE_KEY = "vs-scene";
+const STORAGE_KEY = "vs-scene-v2";
 
 type SceneContextValue = { scene: SceneId; setScene: (s: SceneId) => void };
 
-const SceneContext = createContext<SceneContextValue>({ scene: "city", setScene: () => {} });
+const SceneContext = createContext<SceneContextValue>({ scene: "peaks", setScene: () => {} });
 
 export function SceneProvider({ children }: { children: ReactNode }) {
-  const [scene, setScene] = useState<SceneId>("city");
+  const [scene, setScene] = useState<SceneId>("peaks");
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY) as SceneId | null;
