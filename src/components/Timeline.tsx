@@ -12,7 +12,7 @@ export function Timeline() {
     <Section
       id="timeline"
       label="Timeline"
-      title="Internships, roles and milestones, in order."
+      title="Experience"
     >
       <ol className="relative border-l border-border pl-6 sm:pl-8">
         {timeline.map((item) => (
