@@ -6,7 +6,7 @@ export function BackgroundStage() {
       {/* Slow parallax drift over the skyline */}
       <div
         className="bg-layer"
-        style={{ backgroundImage: `url(${bgCity})`, opacity: 1, filter: "brightness(1.55) saturate(1.15)" }}
+        style={{ backgroundImage: `url(${bgCity})`, opacity: 1, filter: "brightness(1.3) saturate(1.1)" }}
       />
 
       {/* Drifting violet city glow — keeps the frame alive without distracting */}
@@ -17,7 +17,7 @@ export function BackgroundStage() {
         className="fixed inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 46%) 0%, oklch(0.13 0.014 300 / 20%) 38%, oklch(0.13 0.014 300 / 38%) 72%, oklch(0.13 0.014 300 / 62%) 100%)",
+            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 62%) 0%, oklch(0.13 0.014 300 / 40%) 38%, oklch(0.13 0.014 300 / 56%) 72%, oklch(0.13 0.014 300 / 78%) 100%)",
         }}
       />
 
