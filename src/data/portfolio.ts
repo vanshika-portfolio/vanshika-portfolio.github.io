@@ -67,8 +67,6 @@ export const roles: Role[] = [
   },
   {
     org: "University of British Columbia",
-  {
-    org: "University of British Columbia",
     title: "Teaching Assistant · Academic Tutor · Research Assistant",
     period: "2023 — 2024",
     kind: "Education",
