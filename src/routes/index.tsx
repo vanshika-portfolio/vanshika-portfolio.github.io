@@ -43,6 +43,8 @@ function Index() {
         <Experience />
         <Leadership />
         <Work />
+        <Education />
+
         <ResumeRequest />
       </main>
       <Contact />
