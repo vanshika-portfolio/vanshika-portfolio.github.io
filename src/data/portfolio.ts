@@ -15,8 +15,8 @@ export const profile = {
 export const metrics = [
   { value: "4.33", label: "GPA / 4.33", note: "UBC, CS + Data Science" },
   { value: "198", label: "Retail stores", note: "POS rollout QA led" },
-  { value: "60%", label: "Downtime cut", note: "via Azure automation" },
-  { value: "8", label: "Awards", note: "incl. NASA design comp" },
+  { value: "60%", label: "Downtime cut", note: "via Azure automation " },
+  { value: "9+", label: "Awards", note: "incl. NASA design comp" },
 ];
 
 export type Role = {
