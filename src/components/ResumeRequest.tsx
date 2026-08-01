@@ -15,6 +15,9 @@ import {
 
 type State = "idle" | "sending" | "sent" | "error";
 
+// On a static host (GitHub Pages) there is no server function to call.
+const IS_STATIC = import.meta.env['VITE_STATIC_DEPLOY'] === "true";
+
 export function ResumeRequestDialog() {
   const submit = useServerFn(submitResumeRequest);
   const [open, setOpen] = useState(false);
@@ -28,15 +31,17 @@ export function ResumeRequestDialog() {
     setState("sending");
     setError("");
     try {
-      const result = await submit({
-        data: {
-          name: String(fd.get("name") ?? ""),
-          email: String(fd.get("email") ?? ""),
-          company: String(fd.get("company") ?? ""),
-          purpose: String(fd.get("purpose") ?? ""),
-          message: String(fd.get("message") ?? ""),
-        },
-      });
+      const payload = {
+        name: String(fd.get("name") ?? ""),
+        email: String(fd.get("email") ?? ""),
+        company: String(fd.get("company") ?? ""),
+        purpose: String(fd.get("purpose") ?? ""),
+        message: String(fd.get("message") ?? ""),
+      };
+      const result = IS_STATIC
+        ? await submitResumeRequestFromBrowser(payload)
+        : await submit({ data: payload });
+
       if (result.ok) {
         form.reset();
         setState("sent");
