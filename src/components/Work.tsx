@@ -5,7 +5,7 @@ import { Section } from "./Section";
 export function Work() {
   return (
     <Section id="work" label=" " title="Projects and Hackathons">
-      <ul className="grid gap-px overflow-hidden rounded-sm border border-border bg-border lg:grid-cols-2">
+      <ul className="grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
           <li key={p.title}>
             <a
