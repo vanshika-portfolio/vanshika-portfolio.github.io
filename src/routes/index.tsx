@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <SceneProvider>
+    <>
       <BackgroundStage />
       <SiteNav />
       <main>
@@ -40,9 +40,9 @@ function Index() {
         <Experience />
         <Leadership />
         <Work />
-
       </main>
       <Contact />
-    </SceneProvider>
+    </>
+
   );
 }
