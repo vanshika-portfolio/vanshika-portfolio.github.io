@@ -17,7 +17,7 @@ export function Contact() {
           href={`mailto:${profile.email}`}
           className="group mt-10 inline-flex items-baseline gap-3 font-display text-xl leading-tight font-semibold break-all transition-colors hover:text-gold-bright sm:text-3xl"
         >
-          Connect with me
+          Say Hi
           <ArrowUpRight className="size-5 shrink-0 text-gold transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
 
