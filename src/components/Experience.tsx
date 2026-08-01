@@ -3,7 +3,7 @@ import { Section } from "./Section";
 
 export function Experience() {
   return (
-    <Section id="experience" label="Experience" title="Work, internships and roles, in order.">
+    <Section id="experience" label="" title="Professional Experience">
       <ol className="relative border-l border-border pl-6 sm:pl-10">
         {roles.map((role) => (
           <li key={role.org} className="relative pb-12 last:pb-0">
