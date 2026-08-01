@@ -105,7 +105,7 @@ export const leadership: Lead[] = [
     stack: ["AI Strategy", "Workflow Automation", "Governance", "Technical Advising"],
   },
   {
-    org: "FORA (Female Occupational Role Advancement)",
+    org: "FORA Rise on Boards",
     title: "Young Director",
     period: "2022 — 2023",
     kind: "Nonprofit · Governance",
@@ -123,7 +123,7 @@ export const leadership: Lead[] = [
     ],
   },
   {
-    org: "Edu-tainment",
+    org: "Edu-tainment - Volunteer",
     title: "Founder & CEO",
     period: "2020 — 2023",
     kind: "Philanthropy · Education",
