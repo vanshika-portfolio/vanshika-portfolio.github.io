@@ -50,7 +50,9 @@ export function Contact() {
           >
             <Mail className="size-4" strokeWidth={1.6} /> Tutoring
           </a>
+          <ResumeRequestDialog />
         </div>
+
 
         <p className="mt-20 text-xs text-muted-foreground/60">
           © {new Date().getFullYear()} {profile.name}
