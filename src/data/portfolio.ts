@@ -77,44 +77,7 @@ export const roles: Role[] = [
     ],
     stack: ["Teaching", "Statistics", "Calculus", "LaTeX"],
   },
-  {
-    org: "Edu-tainment",
-    title: "Founder & CEO",
-    period: "2020 — 2023",
-    kind: "Philanthropy · Education",
-    titleFirst: true,
-    points: [
-      "Founded and led a nonprofit tutoring initiative that kept students on track through pandemic remote learning, owning strategy, operations and delivery end to end.",
-      "Recruited and trained a volunteer tutor team, designed the curriculum and scheduling model, and built the web platform students and parents booked through.",
-      "Carried the same operating skills into my engineering career: scoping a problem from scratch, communicating with non-technical stakeholders, and shipping a working system with no existing process to lean on.",
-    ],
-    stack: [
-      "Founding & Strategy",
-      "Nonprofit Operations",
-      "Stakeholder Communication",
-      "Curriculum Design",
-      "Web Platform Build",
-    ],
-  },
-  {
-    org: "FORA (Female Occupational Role Advancement)",
-    title: "Young Director",
-    period: "2022 — 2023",
-    kind: "Nonprofit · Governance",
-    titleFirst: true,
-    points: [
-      "Selected as a Young Director and completed formal nonprofit governance training in fiduciary oversight, ethical fundraising, risk and compliance.",
-      "Brought a youth perspective into board discussions on programming, community outreach and organisational priorities.",
-      "Governance and risk framing now shape how I work as an engineer — reading compliance requirements such as GDPR, weighing trade-offs, and making decisions defensible to people outside the room.",
-    ],
-    stack: [
-      "Board Governance",
-      "Fiduciary Oversight",
-      "Risk & Compliance",
-      "Ethical Fundraising",
-      "Public Speaking",
-    ],
-  },
+
 ];
 
 
@@ -288,78 +251,4 @@ export const awards = [
   "Rick and Yasmin Thorpe Scholarship",
   "Undergraduate Mathematics Award",
   "Data Analysis Badge — UBC",
-];
-
-export type TimelineItem = {
-  org: string;
-  title: string;
-  period: string;
-  kind: "work" | "leadership" | "education";
-  note: string;
-};
-
-export const timeline: TimelineItem[] = [
-  {
-    org: "When the Village Mediates",
-    title: "VP of the Board & Lead Technical Consultant",
-    period: "2026 — Present",
-    kind: "leadership",
-    note: "Leading AI workflow-automation strategy and advising the board on technology and scaling.",
-  },
-  {
-    org: "Amazon Web Services",
-    title: "Software Engineer Intern",
-    period: "May — Jul 2025",
-    kind: "work",
-    note: "Built a GDPR-compliant microservice serving millions of EC2 accounts, on Ruby, Lambda and DynamoDB.",
-  },
-  {
-    org: "University of British Columbia",
-    title: "BSc Computer Science & Data Science — 4.33 GPA",
-    period: "Graduated 2025",
-    kind: "education",
-    note: "Dean's Honour List 2021–2023, directed studies in LLM systems and transformer research.",
-  },
-  {
-    org: "Employment and Social Development Canada",
-    title: "Data Engineer Intern",
-    period: "Jan — Apr 2025",
-    kind: "work",
-    note: "Designed Azure Synapse pipelines with Spark and PySpark for departmental ELT workloads.",
-  },
-  {
-    org: "BC Liquor Distribution Branch",
-    title: "Quality Assurance Analyst (Co-op)",
-    period: "May — Dec 2024",
-    kind: "work",
-    note: "Led QA for point-of-sale upgrades across 198 stores and cut downtime 60% with test automation.",
-  },
-  {
-    org: "University of British Columbia",
-    title: "Teaching Assistant · Tutor · Research Assistant",
-    period: "2023 — 2024",
-    kind: "work",
-    note: "Taught 50+ students, tutored across statistics and CS, and prepared research data for publication.",
-  },
-  {
-    org: "FORA (Female Occupational Role Advancement)",
-    title: "Young Director",
-    period: "2022 — 2023",
-    kind: "leadership",
-    note: "Nonprofit governance training in fiduciary oversight, ethical fundraising and compliance.",
-  },
-  {
-    org: "Edu-tainment",
-    title: "Founder & CEO",
-    period: "2020 — 2023",
-    kind: "leadership",
-    note: "Founded a nonprofit tutoring initiative and built the platform, curriculum and tutor programme.",
-  },
-  {
-    org: "Canadian Space Settlement Design Competition",
-    title: "1st Place — NASA",
-    period: "2020",
-    kind: "education",
-    note: "National win in an engineering design competition judged by NASA.",
-  },
 ];
