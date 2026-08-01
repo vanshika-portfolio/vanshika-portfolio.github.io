@@ -123,7 +123,7 @@ export const leadership: Lead[] = [
     ],
   },
   {
-    org: "Edu-tainment",
+    org: "Edu-tainment - Volunteer",
     title: "Founder & CEO",
     period: "2020 — 2023",
     kind: "Philanthropy · Education",
