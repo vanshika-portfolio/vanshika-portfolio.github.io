@@ -213,7 +213,17 @@
   background-position: center;
   opacity: 0;
   transition: opacity 0.9s ease;
-  will-change: opacity;
+  will-change: opacity, transform;
+  animation: bg-drift 40s ease-in-out infinite alternate;
+}
+
+@keyframes bg-drift {
+  0% {
+    transform: scale(1.06) translate3d(-1%, -0.8%, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(1.2%, 1%, 0);
+  }
 }
 
 @utility bg-aurora {
@@ -222,6 +232,26 @@
     radial-gradient(50% 42% at 86% 24%, oklch(0.6 0.11 46 / 55%), transparent 68%),
     radial-gradient(62% 48% at 48% 94%, oklch(0.52 0.09 104 / 60%), transparent 70%),
     oklch(0.16 0.006 88);
+  animation: aurora-drift 26s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift {
+  0% {
+    background-position:
+      0% 0%,
+      100% 0%,
+      50% 100%,
+      0 0;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    background-position:
+      18% 12%,
+      82% 16%,
+      44% 86%,
+      0 0;
+    filter: hue-rotate(-14deg);
+  }
 }
 
 @keyframes rise-in {
