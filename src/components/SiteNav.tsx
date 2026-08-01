@@ -5,7 +5,7 @@ import { profile } from "@/data/portfolio";
 const links = [
   { label: "Experience", href: "#experience" },
   { label: "Leadership", href: "#leadership" },
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#work" },
   
   { label: "Contact", href: "#contact" },
 ];
