@@ -38,6 +38,7 @@ function Index() {
         <About />
         <Experience />
         <Leadership />
+        <Work />
 
       </main>
       <Contact />
