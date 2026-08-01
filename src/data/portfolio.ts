@@ -233,3 +233,77 @@ export const awards = [
   "Undergraduate Mathematics Award",
   "Data Analysis Badge — UBC",
 ];
+
+export type TimelineItem = {
+  org: string;
+  title: string;
+  period: string;
+  kind: "work" | "leadership" | "education";
+  note: string;
+};
+
+export const timeline: TimelineItem[] = [
+  {
+    org: "When the Village Mediates",
+    title: "VP of the Board & Lead Technical Consultant",
+    period: "2026 — Present",
+    kind: "leadership",
+    note: "Leading AI workflow-automation strategy and advising the board on technology and scaling.",
+  },
+  {
+    org: "Amazon Web Services",
+    title: "Software Engineer Intern",
+    period: "May — Jul 2025",
+    kind: "work",
+    note: "Built a GDPR-compliant microservice serving millions of EC2 accounts, on Ruby, Lambda and DynamoDB.",
+  },
+  {
+    org: "University of British Columbia",
+    title: "BSc Computer Science & Data Science — 4.33 GPA",
+    period: "Graduated 2025",
+    kind: "education",
+    note: "Dean's Honour List 2021–2023, directed studies in LLM systems and transformer research.",
+  },
+  {
+    org: "Employment and Social Development Canada",
+    title: "Data Engineer Intern",
+    period: "Jan — Apr 2025",
+    kind: "work",
+    note: "Designed Azure Synapse pipelines with Spark and PySpark for departmental ELT workloads.",
+  },
+  {
+    org: "BC Liquor Distribution Branch",
+    title: "Quality Assurance Analyst (Co-op)",
+    period: "May — Dec 2024",
+    kind: "work",
+    note: "Led QA for point-of-sale upgrades across 198 stores and cut downtime 60% with test automation.",
+  },
+  {
+    org: "University of British Columbia",
+    title: "Teaching Assistant · Tutor · Research Assistant",
+    period: "2023 — 2024",
+    kind: "work",
+    note: "Taught 50+ students, tutored across statistics and CS, and prepared research data for publication.",
+  },
+  {
+    org: "FORA (Female Occupational Role Advancement)",
+    title: "Young Director",
+    period: "2022 — 2023",
+    kind: "leadership",
+    note: "Nonprofit governance training in fiduciary oversight, ethical fundraising and compliance.",
+  },
+  {
+    org: "Edu-tainment",
+    title: "Founder & CEO",
+    period: "2020 — 2023",
+    kind: "leadership",
+    note: "Founded a nonprofit tutoring initiative and built the platform, curriculum and tutor programme.",
+  },
+  {
+    org: "Canadian Space Settlement Design Competition",
+    title: "1st Place — NASA",
+    period: "2020",
+    kind: "education",
+    note: "National win in an engineering design competition judged by NASA.",
+  },
+];
