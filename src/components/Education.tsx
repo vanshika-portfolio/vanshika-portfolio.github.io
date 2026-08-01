@@ -15,43 +15,25 @@ export function Education() {
         </div>
 
         <div className="panel-raised rounded-sm px-6 py-8 sm:px-8">
-          <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
-            <div>
-              <p className="rule-label">Awards</p>
-              <ul className="mt-6 space-y-4">
-                {awards.map((a) => (
-                  <li key={a} className="flex gap-3 text-sm leading-snug">
-                    <span aria-hidden className="mt-[7px] h-px w-4 shrink-0 bg-gold" />
-                    <span className="text-muted-foreground">{a}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="sm:border-l sm:border-hairline sm:pl-8">
-              <p className="rule-label">Certifications</p>
-              {certifications.length ? (
-                <ul className="mt-6 space-y-4">
-                  {certifications.map((c) => (
-                    <li key={c.name} className="flex gap-3 text-sm leading-snug">
-                      <span aria-hidden className="mt-[7px] h-px w-4 shrink-0 bg-gold" />
-                      <span className="text-muted-foreground">
-                        {c.name} <span className="text-foreground/60">— {c.issuer}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="mt-6 text-sm leading-relaxed text-muted-foreground/70">
-                  Coming soon — currently working through additional cloud and data
-                  certifications.
-                </p>
-              )}
-            </div>
-          </div>
+          <p className="rule-label">Awards & certificates</p>
+          <ul className="mt-6 space-y-4">
+            {awards.map((a) => (
+              <li key={a} className="flex gap-3 text-sm leading-snug">
+                <span aria-hidden className="mt-[7px] h-px w-4 shrink-0 bg-gold" />
+                <span className="text-muted-foreground">{a}</span>
+              </li>
+            ))}
+            {certifications.map((c) => (
+              <li key={c.name} className="flex gap-3 text-sm leading-snug">
+                <span aria-hidden className="mt-[7px] h-px w-4 shrink-0 bg-gold" />
+                <span className="text-muted-foreground">
+                  {c.name} <span className="text-foreground/60">— {c.issuer}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-
     </Section>
   );
 }
