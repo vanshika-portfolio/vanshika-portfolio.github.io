@@ -254,7 +254,16 @@ export const awards = [
 ];
 
 // Add certificates here (name + issuer) and they appear beside the awards.
-export const certifications: { name: string; issuer: string }[] = [];
+export const certifications: { name: string; issuer: string }[] = [
+  { name: "IBM Enterprise Design Thinking", issuer: "IBM" },
+  { name: "Prompt Engineering", issuer: "DeepLearning.AI" },
+  { name: "n8n Workflow Automation", issuer: "n8n" },
+  { name: "PowerBI Essentials", issuer: "Microsoft" },
+  { name: "Software Testing/QA", issuer: "BC LDB" },
+  { name: "Hands-On AI: Introduction to Retrieval-Augmented Generation (RAG)", issuer: "NVIDIA" },
+  { name: "Automate Data Analytics and Reporting with n8n", issuer: "n8n" },
+  { name: "Tutor Level I- International Tutor Training Program", issuer: "CRLA" },
+];
 
 
 export const education = {
