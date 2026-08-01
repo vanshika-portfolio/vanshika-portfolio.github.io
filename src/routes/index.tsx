@@ -37,7 +37,6 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Timeline />
         <Experience />
         <Leadership />
         <Work />
