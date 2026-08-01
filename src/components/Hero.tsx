@@ -1,5 +1,6 @@
 import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { metrics, profile } from "@/data/portfolio";
+import { Typewriter } from "@/components/Typewriter";
 
 export function Hero() {
   return (
