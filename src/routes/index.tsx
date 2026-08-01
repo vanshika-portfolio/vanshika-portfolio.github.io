@@ -3,7 +3,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundStage } from "@/components/BackgroundStage";
 import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
 
 import { Experience } from "@/components/Experience";
 import { Leadership } from "@/components/Leadership";
@@ -39,7 +38,6 @@ function Index() {
       <SiteNav />
       <main>
         <Hero />
-        <About />
         <Experience />
         <Leadership />
         <Work />
