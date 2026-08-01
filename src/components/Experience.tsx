@@ -16,8 +16,8 @@ export function Experience() {
               </div>
 
               <div>
-                <h3 className="text-lg leading-snug font-semibold">{role.title}</h3>
-                <p className="mt-1 text-sm font-medium text-gold-bright">{role.org}</p>
+                <h3 className="text-lg leading-snug font-semibold sm:text-xl">{role.org}</h3>
+                <p className="mt-1 text-sm font-medium text-gold-bright">{role.title}</p>
 
                 <ul className="mt-5 space-y-2.5">
                   {role.points.map((p) => (

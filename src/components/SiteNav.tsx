@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
-import { Building2, Mountain, Sparkles, Grid3x3, Circle } from "lucide-react";
+import { Waves, Mountain, Sparkles, Trees, Circle } from "lucide-react";
 import { scenes, useScene, type SceneId } from "./scene-context";
 import { profile } from "@/data/portfolio";
 
 const icons: Record<SceneId, typeof Circle> = {
   noir: Circle,
-  city: Building2,
-  nature: Mountain,
+  peaks: Mountain,
+  mist: Trees,
+  dunes: Waves,
   aurora: Sparkles,
-  blueprint: Grid3x3,
 };
 
 const links = [
   { label: "About", href: "#about" },
+  { label: "Timeline", href: "#timeline" },
   { label: "Experience", href: "#experience" },
   { label: "Leadership", href: "#leadership" },
   { label: "Work", href: "#work" },
