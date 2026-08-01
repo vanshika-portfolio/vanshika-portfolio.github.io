@@ -30,17 +30,6 @@ export type Role = {
 
 export const roles: Role[] = [
   {
-    org: "When the Village Mediates",
-    title: "VP of the Board & Lead Technical Consultant",
-    period: "2026 — Present",
-    kind: "NGO",
-    points: [
-      "Drive AI-powered workflow automation strategy, translating business needs into practical technical solutions with a founding-team mindset.",
-      "Advise leadership on technology strategy and process optimisation; work with the board and community stakeholders on governance and long-term scaling.",
-    ],
-    stack: ["AI Strategy", "Workflow Automation", "Governance", "Technical Advising"],
-  },
-  {
     org: "Amazon Web Services",
     title: "Software Engineer",
     period: "May — Jul 2025",
@@ -86,16 +75,51 @@ export const roles: Role[] = [
     ],
     stack: ["Teaching", "Statistics", "Calculus", "LaTeX"],
   },
+];
+
+
+export type Lead = {
+  org: string;
+  title: string;
+  period: string;
+  kind: string;
+  points: string[];
+  stack: string[];
+};
+
+export const leadership: Lead[] = [
   {
-    org: "FORA · Edu-tainment",
-    title: "Young Director · Founder & CEO",
-    period: "2020 — 2023",
-    kind: "Nonprofit",
+    org: "When the Village Mediates",
+    title: "VP of the Board & Lead Technical Consultant",
+    period: "2026 — Present",
+    kind: "NGO · Board leadership",
     points: [
-      "Completed nonprofit governance training in fiduciary oversight, ethical fundraising and compliance.",
-      "Founded and ran a nonprofit tutoring initiative supporting students through pandemic remote learning.",
+      "Drive AI-powered workflow automation strategy, translating community needs into practical technical solutions with a founding-team mindset.",
+      "Advise leadership on technology strategy and process optimisation; work with the board and community stakeholders on governance and long-term scaling.",
     ],
-    stack: ["Board Governance", "Strategic Planning", "Entrepreneurship"],
+    stack: ["AI Strategy", "Workflow Automation", "Governance", "Technical Advising"],
+  },
+  {
+    org: "FORA (Female Occupational Role Advancement)",
+    title: "Young Director",
+    period: "2022 — 2023",
+    kind: "Nonprofit · Governance",
+    points: [
+      "Served as a Young Director, completing nonprofit governance training in fiduciary oversight, ethical fundraising and compliance.",
+      "Contributed a youth perspective to board discussions on programming and community outreach.",
+    ],
+    stack: ["Board Governance", "Fiduciary Oversight", "Fundraising Ethics"],
+  },
+  {
+    org: "Edu-tainment",
+    title: "Founder & CEO",
+    period: "2020 — 2023",
+    kind: "Philanthropy · Education",
+    points: [
+      "Founded and ran a nonprofit tutoring initiative supporting students through pandemic remote learning.",
+      "Built the programme end to end — tutor recruitment, curriculum, scheduling and the platform itself.",
+    ],
+    stack: ["Nonprofit Ops", "Strategic Planning", "Entrepreneurship"],
   },
 ];
 
@@ -108,7 +132,7 @@ export type Project = {
   linkLabel: string;
 };
 
-export const featured: Project[] = [
+export const projects: Project[] = [
   {
     title: "Brewlytics — Café Digital Twin",
     tag: "Hackathon winner · 1.5 days",
@@ -136,9 +160,7 @@ export const featured: Project[] = [
     href: "https://github.com/bohuie/LLMTraining",
     linkLabel: "Source",
   },
-];
 
-export const archive: Project[] = [
   {
     title: "Game of Amazons AI Bot",
     tag: "3rd of 23 teams",
