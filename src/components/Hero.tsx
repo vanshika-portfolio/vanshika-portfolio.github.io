@@ -3,29 +3,34 @@ import { metrics, profile } from "@/data/portfolio";
 
 export function Hero() {
   return (
-    <section id="top" className="relative mx-auto max-w-6xl px-5 pt-32 pb-20 sm:px-8 sm:pt-40 sm:pb-28">
+    <section id="top" className="relative mx-auto max-w-6xl px-5 pt-32 pb-16 sm:px-8 sm:pt-40 sm:pb-20">
       <p className="rule-label rise flex items-center gap-2">
         <MapPin className="size-3.5" strokeWidth={1.8} />
         {profile.location}
       </p>
 
-      <h1 className="rise mt-7 max-w-4xl text-[2.6rem] leading-[1.02] font-semibold sm:text-6xl lg:text-[4.6rem]">
+      <h1 className="rise mt-6 font-display text-[3.1rem] leading-[0.95] font-semibold tracking-[-0.045em] sm:text-7xl lg:text-[6.2rem]">
+        <span className="text-gold-gradient block">{profile.name}</span>
+      </h1>
+
+      <p className="rise mt-5 font-display text-xl leading-snug font-medium text-foreground/90 sm:text-3xl">
         {profile.headline.map((line, i) => (
           <span key={line} className="block">
             {i === 1 ? (
               <>
-                Interpreting <span className="text-gold-gradient">data</span>.
+                Interpreting <span className="text-gold">data</span>.
               </>
             ) : (
               line
             )}
           </span>
         ))}
-      </h1>
+      </p>
 
-      <p className="rise mt-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+      <p className="rise mt-7 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
         {profile.summary}
       </p>
+
 
       <div className="rise mt-10 flex flex-wrap items-center gap-3">
         <a
@@ -62,7 +67,7 @@ export function Hero() {
         </a>
       </div>
 
-      <dl className="rise mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-4">
+      <dl className="rise mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-4">
         {metrics.map((m) => (
           <div key={m.label} className="panel border-0 px-5 py-6">
             <dd className="font-display text-3xl font-semibold tracking-tight text-gold-bright">{m.value}</dd>

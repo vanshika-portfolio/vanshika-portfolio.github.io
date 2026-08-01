@@ -12,7 +12,7 @@ export function Section({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28">
+    <section id={id} className="mx-auto max-w-6xl scroll-mt-20 px-5 py-14 sm:px-8 sm:py-20">
       <div className="hairline-top pt-8">
         {label.trim() && <p className="rule-label">{label}</p>}
         <h2
@@ -21,7 +21,7 @@ export function Section({
           {title}
         </h2>
       </div>
-      <div className="mt-12">{children}</div>
+      <div className="mt-10">{children}</div>
     </section>
   );
 }

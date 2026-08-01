@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SceneProvider } from "@/components/scene-context";
+
 import { BackgroundStage } from "@/components/BackgroundStage";
 import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/Hero";
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <SceneProvider>
+    <>
       <BackgroundStage />
       <SiteNav />
       <main>
@@ -40,9 +40,9 @@ function Index() {
         <Experience />
         <Leadership />
         <Work />
-
       </main>
       <Contact />
-    </SceneProvider>
+    </>
+
   );
 }

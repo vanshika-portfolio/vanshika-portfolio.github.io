@@ -1,28 +1,18 @@
 import { useEffect, useState } from "react";
-import { Waves, Mountain, Sparkles, Trees, Circle } from "lucide-react";
-import { scenes, useScene, type SceneId } from "./scene-context";
+import { Menu, X } from "lucide-react";
 import { profile } from "@/data/portfolio";
-
-const icons: Record<SceneId, typeof Circle> = {
-  noir: Circle,
-  peaks: Mountain,
-  mist: Trees,
-  dunes: Waves,
-  aurora: Sparkles,
-};
 
 const links = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Leadership", href: "#leadership" },
   { label: "Work", href: "#work" },
-
   { label: "Contact", href: "#contact" },
 ];
 
 export function SiteNav() {
-  const { scene, setScene } = useScene();
   const [solid, setSolid] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 24);
@@ -34,12 +24,16 @@ export function SiteNav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-        solid ? "panel border-x-0 border-t-0" : "border-b border-transparent"
+        solid || open ? "panel border-x-0 border-t-0" : "border-b border-transparent"
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-5 sm:px-8">
-        <a href="#top" className="flex items-baseline gap-2 font-display text-sm font-semibold tracking-tight">
-          <span>{profile.name}</span>
+        <a
+          href="#top"
+          onClick={() => setOpen(false)}
+          className="flex items-baseline gap-2 font-display text-base font-semibold tracking-tight sm:text-lg"
+        >
+          <span className="text-gold-gradient">{profile.name}</span>
           <span className="hidden text-gold sm:inline">/</span>
           <span className="hidden text-[0.7rem] font-normal tracking-[0.18em] text-muted-foreground uppercase sm:inline">
             Engineer
@@ -58,30 +52,33 @@ export function SiteNav() {
           ))}
         </div>
 
-        <div className="ml-auto flex items-center gap-1 md:ml-6" role="group" aria-label="Background scene">
-          {scenes.map((s) => {
-            const Icon = icons[s.id];
-            const active = scene === s.id;
-            return (
-              <button
-                key={s.id}
-                type="button"
-                onClick={() => setScene(s.id)}
-                aria-pressed={active}
-                title={`${s.label} — ${s.hint}`}
-                aria-label={`Background: ${s.label}`}
-                className={`grid size-8 place-items-center rounded-sm border transition-all duration-300 ${
-                  active
-                    ? "border-gold/70 bg-gold/12 text-gold"
-                    : "border-border/70 text-muted-foreground hover:border-gold/40 hover:text-gold-bright"
-                }`}
-              >
-                <Icon className="size-[15px]" strokeWidth={1.6} />
-              </button>
-            );
-          })}
-        </div>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? "Close menu" : "Open menu"}
+          className="ml-auto grid size-10 place-items-center rounded-sm border border-border text-muted-foreground transition-colors hover:border-gold/50 hover:text-gold md:hidden"
+        >
+          {open ? <X className="size-[18px]" strokeWidth={1.7} /> : <Menu className="size-[18px]" strokeWidth={1.7} />}
+        </button>
       </nav>
+
+      {open && (
+        <div className="border-t border-hairline md:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col px-5 pb-4 sm:px-8">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="border-b border-hairline py-3.5 text-sm font-medium text-muted-foreground transition-colors last:border-0 hover:text-gold"
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }

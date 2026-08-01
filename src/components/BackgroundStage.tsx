@@ -1,38 +1,20 @@
-import bgDunes from "@/assets/bg-dunes.jpg";
-import bgPeaks from "@/assets/bg-peaks.jpg";
-import bgMist from "@/assets/bg-mist.jpg";
-import { useScene } from "./scene-context";
-
-const photo: Record<string, string> = {
-  dunes: bgDunes,
-  peaks: bgPeaks,
-  mist: bgMist,
-};
+import bgCity from "@/assets/bg-city.jpg";
 
 export function BackgroundStage() {
-  const { scene } = useScene();
-
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-background">
-      {(["dunes", "peaks", "mist"] as const).map((id) => (
-        <div
-          key={id}
-          className="bg-layer"
-          style={{
-            backgroundImage: `url(${photo[id]})`,
-            opacity: scene === id ? 1 : 0,
-          }}
-        />
-      ))}
-      <div className="bg-layer bg-aurora" style={{ opacity: scene === "aurora" ? 1 : 0 }} />
+      {/* Slow parallax drift over the skyline */}
+      <div className="bg-layer" style={{ backgroundImage: `url(${bgCity})`, opacity: 1 }} />
 
-      {/* Legibility scrim — photo scenes need much more damping than abstract ones */}
+      {/* Drifting violet city glow — keeps the frame alive without distracting */}
+      <div className="bg-glow" />
+
+      {/* Legibility scrim */}
       <div
-        className="fixed inset-0 transition-opacity duration-700"
+        className="fixed inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 88%) 0%, oklch(0.13 0.014 300 / 68%) 34%, oklch(0.13 0.014 300 / 82%) 72%, oklch(0.13 0.014 300 / 94%) 100%)",
-          opacity: scene === "aurora" ? 0.5 : 1,
+            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 88%) 0%, oklch(0.13 0.014 300 / 66%) 34%, oklch(0.13 0.014 300 / 82%) 72%, oklch(0.13 0.014 300 / 94%) 100%)",
         }}
       />
 
