@@ -10,9 +10,7 @@ export function Contact() {
           Open to engineering, data and product roles.
         </h2>
         <p className="mt-6 max-w-2xl text-[0.975rem] leading-relaxed text-muted-foreground">
-          Currently seeking full-time software and data engineering positions. I also take on technical
-          consultancy — usually automation and efficiency work where a small amount of engineering removes a
-          large amount of manual process.
+          Always open to collaborate and connect with innovative people!
         </p>
 
         <a
