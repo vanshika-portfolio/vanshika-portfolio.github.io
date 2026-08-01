@@ -19,7 +19,7 @@ export function Contact() {
           href={`mailto:${profile.email}`}
           className="group mt-10 inline-flex items-baseline gap-3 font-display text-xl leading-tight font-semibold break-all transition-colors hover:text-gold-bright sm:text-3xl"
         >
-          {profile.email}
+          Connect with me
           <ArrowUpRight className="size-5 shrink-0 text-gold transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
 
@@ -51,7 +51,7 @@ export function Contact() {
         </div>
 
         <p className="mt-20 text-xs text-muted-foreground/60">
-          © {new Date().getFullYear()} {profile.name}. Vancouver, BC.
+          © {new Date().getFullYear()} {profile.name}
         </p>
       </div>
     </footer>
