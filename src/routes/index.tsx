@@ -8,6 +8,7 @@ import { About } from "@/components/About";
 import { Experience } from "@/components/Experience";
 import { Leadership } from "@/components/Leadership";
 import { Work } from "@/components/Work";
+import { ResumeRequest } from "@/components/ResumeRequest";
 import { Contact } from "@/components/Contact";
 
 
@@ -40,6 +41,7 @@ function Index() {
         <Experience />
         <Leadership />
         <Work />
+        <ResumeRequest />
       </main>
       <Contact />
     </>

@@ -1,0 +1,1 @@
+DELETE FROM public.resume_requests WHERE email = 'test@example.com';
