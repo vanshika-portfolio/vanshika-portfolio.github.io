@@ -5,8 +5,8 @@ export function Leadership() {
   return (
     <Section
       id="leadership"
-      label="Leadership & philanthropy"
-      title="Board service, governance and community work."
+      label=" "
+      title="Leadership and Philanthropy"
     >
       <ol className="space-y-px overflow-hidden rounded-sm border border-border bg-border">
         {leadership.map((role) => (
