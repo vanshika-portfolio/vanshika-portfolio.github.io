@@ -222,27 +222,6 @@
     radial-gradient(50% 42% at 86% 24%, oklch(0.6 0.11 46 / 55%), transparent 68%),
     radial-gradient(62% 48% at 48% 94%, oklch(0.52 0.09 104 / 60%), transparent 70%),
     oklch(0.16 0.006 88);
-  animation: aurora-drift 26s ease-in-out infinite alternate;
-}
-
-
-@keyframes aurora-drift {
-  0% {
-    background-position:
-      0% 0%,
-      100% 0%,
-      50% 100%,
-      0 0;
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    background-position:
-      18% 12%,
-      82% 16%,
-      44% 86%,
-      0 0;
-    filter: hue-rotate(-14deg);
-  }
 }
 
 @keyframes rise-in {
