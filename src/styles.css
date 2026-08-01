@@ -208,21 +208,21 @@
 
 @utility bg-layer {
   position: fixed;
-  inset: 0;
+  inset: -6%;
   background-size: cover;
   background-position: center;
   opacity: 0;
   transition: opacity 0.9s ease;
   will-change: opacity, transform;
-  animation: bg-drift 40s ease-in-out infinite alternate;
+  animation: bg-drift 22s ease-in-out infinite alternate;
 }
 
 @keyframes bg-drift {
   0% {
-    transform: scale(1.06) translate3d(-1%, -0.8%, 0);
+    transform: scale(1.04) translate3d(-2.5%, -2%, 0);
   }
   100% {
-    transform: scale(1.12) translate3d(1.2%, 1%, 0);
+    transform: scale(1.16) translate3d(2.5%, 2%, 0);
   }
 }
 
@@ -232,7 +232,8 @@
     radial-gradient(50% 42% at 86% 24%, oklch(0.6 0.11 46 / 55%), transparent 68%),
     radial-gradient(62% 48% at 48% 94%, oklch(0.52 0.09 104 / 60%), transparent 70%),
     oklch(0.16 0.006 88);
-  animation: aurora-drift 26s ease-in-out infinite alternate;
+  background-size: 180% 180%;
+  animation: aurora-drift 18s ease-in-out infinite alternate;
 }
 
 @keyframes aurora-drift {
@@ -246,11 +247,11 @@
   }
   100% {
     background-position:
-      18% 12%,
-      82% 16%,
-      44% 86%,
+      70% 60%,
+      20% 80%,
+      90% 10%,
       0 0;
-    filter: hue-rotate(-14deg);
+    filter: hue-rotate(-18deg);
   }
 }
 
