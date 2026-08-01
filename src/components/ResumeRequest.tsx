@@ -84,9 +84,8 @@ export function ResumeRequestDialog() {
           <DialogTitle className="font-display text-2xl leading-tight font-semibold">
             Request my résumé
           </DialogTitle>
-          <DialogDescription className="text-sm leading-relaxed">
-            My résumé isn't posted publicly — it carries personal details I'd rather not hand to
-            scrapers. Tell me who you are and I'll send it over personally, usually within a day.
+          <DialogDescription className="sr-only">
+            Request my résumé
           </DialogDescription>
         </DialogHeader>
 
