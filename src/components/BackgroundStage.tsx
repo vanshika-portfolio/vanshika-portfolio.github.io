@@ -1,26 +1,33 @@
 import bgCity from "@/assets/bg-city.jpg";
+import { overlayGradient, useAdaptiveOverlay } from "@/hooks/use-adaptive-overlay";
+
+const IMAGE_BRIGHTNESS = 1.3;
 
 export function BackgroundStage() {
+  // Samples the artwork and returns per-band scrim strengths, so text keeps a
+  // readable contrast ratio whether the image is dark or bright.
+  const overlay = useAdaptiveOverlay(bgCity, { brightness: IMAGE_BRIGHTNESS });
+
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-background">
       {/* Slow parallax drift over the skyline */}
       <div
         className="bg-layer"
-        style={{ backgroundImage: `url(${bgCity})`, opacity: 1, filter: "brightness(1.3) saturate(1.1)" }}
+        style={{
+          backgroundImage: `url(${bgCity})`,
+          opacity: 1,
+          filter: `brightness(${IMAGE_BRIGHTNESS}) saturate(1.1)`,
+        }}
       />
 
       {/* Drifting violet city glow — keeps the frame alive without distracting */}
       <div className="bg-glow" />
 
-      {/* Legibility scrim */}
+      {/* Adaptive legibility overlay */}
       <div
-        className="fixed inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 62%) 0%, oklch(0.13 0.014 300 / 40%) 38%, oklch(0.13 0.014 300 / 56%) 72%, oklch(0.13 0.014 300 / 78%) 100%)",
-        }}
+        className="fixed inset-0 transition-[background] duration-700"
+        style={{ background: overlayGradient(overlay) }}
       />
-
 
       <div
         className="fixed inset-0 opacity-[0.035]"
