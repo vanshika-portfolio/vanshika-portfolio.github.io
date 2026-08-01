@@ -5,7 +5,7 @@ export const profile = {
   location: "Vancouver, BC · Canada",
   headline: ["Engineering systems.", "Interpreting data.", "Building for scale."],
   summary:
-    "Computer Science and Data Science graduate from UBC. I build reliable backend and data infrastructure — and advise organisations on where automation actually pays off.",
+    "",
   email: "vanshikasingla09@gmail.com",
   github: "https://github.com/PaintedW0lf",
   linkedin: "https://www.linkedin.com/in/vanshika-singla",
