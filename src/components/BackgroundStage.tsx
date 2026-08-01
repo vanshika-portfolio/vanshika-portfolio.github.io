@@ -1,12 +1,16 @@
 import bgCity from "@/assets/bg-city.jpg";
 import { overlayGradient, useAdaptiveOverlay } from "@/hooks/use-adaptive-overlay";
 
-const IMAGE_BRIGHTNESS = 1.3;
+const IMAGE_BRIGHTNESS = 0.72;
 
 export function BackgroundStage() {
   // Samples the artwork and returns per-band scrim strengths, so text keeps a
   // readable contrast ratio whether the image is dark or bright.
-  const overlay = useAdaptiveOverlay(bgCity, { brightness: IMAGE_BRIGHTNESS });
+  const overlay = useAdaptiveOverlay(bgCity, {
+    brightness: IMAGE_BRIGHTNESS,
+    target: 0.14,
+    minAlpha: 0.34,
+  });
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-background">
@@ -16,7 +20,7 @@ export function BackgroundStage() {
         style={{
           backgroundImage: `url(${bgCity})`,
           opacity: 1,
-          filter: `brightness(${IMAGE_BRIGHTNESS}) saturate(1.1)`,
+          filter: `brightness(${IMAGE_BRIGHTNESS}) contrast(1.05) saturate(1.05)`,
         }}
       />
 
