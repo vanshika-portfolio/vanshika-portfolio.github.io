@@ -12,7 +12,7 @@
 // repository (https://<user>.github.io) or a custom domain.
 
 import { spawnSync } from "node:child_process";
-import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -20,7 +20,13 @@ const root = process.cwd();
 const rawBase = process.env.PAGES_BASE ?? "/";
 const base = normaliseBase(rawBase);
 const outDir = resolve(root, "dist/pages");
-const clientDir = resolve(root, "dist/client");
+// Where the browser bundle lands can vary between build targets, so probe.
+const clientDirCandidates = [
+  "dist/client",
+  ".output/public",
+  "dist/.output/public",
+  "dist/public",
+];
 // Vite writes the Node-runnable SSR bundle here during the build.
 const ssrEntry = resolve(root, "node_modules/.nitro/vite/services/ssr/index.js");
 
@@ -46,7 +52,8 @@ console.log(`\n[pages] building static site with base "${base}"`);
 rmSync(outDir, { recursive: true, force: true });
 
 // 1. Build. VITE_STATIC_DEPLOY makes the app skip server-only code paths.
-run("npx", ["vite", "build", `--base=${base}`], {
+const viteBin = resolve(root, "node_modules/vite/bin/vite.js");
+run(process.execPath, [viteBin, "build", `--base=${base}`], {
   VITE_STATIC_DEPLOY: "true",
   VITE_PAGES_BASE: base,
 });
@@ -62,6 +69,20 @@ if (response.status !== 200 || !html.includes("<html")) {
 }
 
 // 3. Assemble the static output.
+const clientDir = clientDirCandidates.map((dir) => resolve(root, dir)).find(existsSync);
+
+if (!clientDir) {
+  const listing = existsSync(resolve(root, "dist"))
+    ? readdirSync(resolve(root, "dist")).join(", ")
+    : "(no dist directory)";
+  throw new Error(
+    `Could not find the built client assets. Looked in: ${clientDirCandidates.join(", ")}.\n` +
+      `dist/ contains: ${listing}`,
+  );
+}
+
+console.log(`[pages] using client assets from ${clientDir}`);
+
 mkdirSync(outDir, { recursive: true });
 cpSync(clientDir, outDir, { recursive: true });
 writeFileSync(resolve(outDir, "index.html"), html);

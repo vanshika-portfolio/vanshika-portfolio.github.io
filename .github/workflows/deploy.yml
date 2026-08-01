@@ -36,7 +36,7 @@ jobs:
       - name: Build static site
         # base_path is "/<repo>" for a project site, "" for a user/org site or
         # custom domain. configure-pages works this out automatically.
-        run: bun run scripts/build-pages.mjs
+        run: bun run build:pages
         env:
           PAGES_BASE: ${{ steps.pages.outputs.base_path }}/
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
