@@ -26,6 +26,8 @@ export type Role = {
   kind: string;
   points: string[];
   stack: string[];
+  /** When true, the role title leads as the bold heading instead of the organisation. */
+  titleFirst?: boolean;
 };
 
 export const roles: Role[] = [
