@@ -16,7 +16,7 @@ export function Typewriter({ lines, speed = 55, linePause = 380, className }: Pr
 
   useEffect(() => {
     if (done) return;
-    const current = lines[lineIndex];
+    const current = lines[lineIndex] ?? "";
     if (charCount < current.length) {
       const t = setTimeout(() => setCharCount((c) => c + 1), speed);
       return () => clearTimeout(t);
