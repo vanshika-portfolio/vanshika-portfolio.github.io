@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from "
 export type SceneId = "noir" | "peaks" | "mist" | "dunes" | "aurora";
 
 export const scenes: { id: SceneId; label: string; hint: string }[] = [
-  { id: "noir", label: "Noir", hint: "Pure black" },
+  { id: "noir", label: "Noir", hint: "Black purple" },
   { id: "peaks", label: "Peaks", hint: "Violet mountain haze" },
   { id: "mist", label: "Mist", hint: "Purple forest lake" },
   { id: "dunes", label: "Dunes", hint: "Night desert sky" },
