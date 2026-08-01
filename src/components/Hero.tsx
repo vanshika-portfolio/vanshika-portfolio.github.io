@@ -1,5 +1,6 @@
 import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { metrics, profile } from "@/data/portfolio";
+import { Typewriter } from "@/components/Typewriter";
 
 export function Hero() {
   return (
@@ -13,19 +14,10 @@ export function Hero() {
         <span className="text-gold-gradient block">{profile.name}</span>
       </h1>
 
-      <p className="rise mt-5 font-display text-xl leading-snug font-medium text-foreground/90 sm:text-3xl">
-        {profile.headline.map((line, i) => (
-          <span key={line} className="block">
-            {i === 1 ? (
-              <>
-                Interpreting <span className="text-gold">data</span>.
-              </>
-            ) : (
-              line
-            )}
-          </span>
-        ))}
+      <p className="rise mt-5 min-h-[4.5rem] font-display text-xl leading-snug font-medium text-foreground/90 sm:min-h-[7.5rem] sm:text-3xl">
+        <Typewriter lines={profile.headline} />
       </p>
+
 
       <p className="rise mt-7 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
         {profile.summary}
