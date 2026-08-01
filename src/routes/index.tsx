@@ -37,7 +37,8 @@ function Index() {
         <Hero />
         <About />
         <Experience />
-        <Work />
+        <Leadership />
+
       </main>
       <Contact />
     </SceneProvider>
