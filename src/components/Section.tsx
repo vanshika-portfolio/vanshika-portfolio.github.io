@@ -25,7 +25,7 @@ export function Section({
         </div>
       </Reveal>
       <Reveal delay={90}>
-        <div className="mt-10">{children}</div>
+        <div className="mt-7">{children}</div>
       </Reveal>
     </section>
   );
