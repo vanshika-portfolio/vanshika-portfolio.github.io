@@ -96,7 +96,7 @@ export const leadership: Lead[] = [
   {
     org: "When the Village Mediates",
     title: "VP of the Board & Lead Technical Consultant",
-    period: "2026 — Present",
+    period: "2025 — Present",
     kind: "NGO · Board leadership",
     points: [
       "Drive AI-powered workflow automation strategy, translating community needs into practical technical solutions with a founding-team mindset.",
