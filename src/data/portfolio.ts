@@ -83,38 +83,10 @@ export const roles: Role[] = [
     period: "2020 — 2023",
     kind: "Philanthropy · Education",
     titleFirst: true,
-    points: [
-      "Founded and led a nonprofit tutoring initiative that kept students on track through pandemic remote learning, owning strategy, operations and delivery end to end.",
-      "Recruited and trained a volunteer tutor team, designed the curriculum and scheduling model, and built the web platform students and parents booked through.",
-      "Carried the same operating skills into my engineering career: scoping a problem from scratch, communicating with non-technical stakeholders, and shipping a working system with no existing process to lean on.",
-    ],
-    stack: [
-      "Founding & Strategy",
-      "Nonprofit Operations",
-      "Stakeholder Communication",
-      "Curriculum Design",
-      "Web Platform Build",
-    ],
+    points: [],
+    stack: [],
   },
-  {
-    org: "FORA (Female Occupational Role Advancement)",
-    title: "Young Director",
-    period: "2022 — 2023",
-    kind: "Nonprofit · Governance",
-    titleFirst: true,
-    points: [
-      "Selected as a Young Director and completed formal nonprofit governance training in fiduciary oversight, ethical fundraising, risk and compliance.",
-      "Brought a youth perspective into board discussions on programming, community outreach and organisational priorities.",
-      "Governance and risk framing now shape how I work as an engineer — reading compliance requirements such as GDPR, weighing trade-offs, and making decisions defensible to people outside the room.",
-    ],
-    stack: [
-      "Board Governance",
-      "Fiduciary Oversight",
-      "Risk & Compliance",
-      "Ethical Fundraising",
-      "Public Speaking",
-    ],
-  },
+
 ];
 
 
