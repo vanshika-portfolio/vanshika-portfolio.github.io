@@ -7,19 +7,22 @@ export function Contact() {
       <div className="hairline-top pt-8">
         <p className="rule-label">Contact</p>
         <h2 className="mt-4 max-w-2xl text-3xl leading-tight font-semibold sm:text-4xl">
-          Open to engineering, data and product roles.
+          Let's build something worth shipping.
         </h2>
         <p className="mt-6 max-w-2xl text-[0.975rem] leading-relaxed text-muted-foreground">
-          Always open to collaborate and connect with innovative people!
+          I'm open to software and data engineering roles, and I always enjoy a good conversation
+          about systems, data or an idea you're trying to get off the ground. Reach out and I'll
+          get back to you.
         </p>
 
         <a
           href={`mailto:${profile.email}`}
           className="group mt-10 inline-flex items-baseline gap-3 font-display text-xl leading-tight font-semibold break-all transition-colors hover:text-gold-bright sm:text-3xl"
         >
-          Say Hi
+          {profile.email}
           <ArrowUpRight className="size-5 shrink-0 text-gold transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
+
 
         <div className="mt-12 flex flex-wrap items-center gap-3">
           <a
