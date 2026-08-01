@@ -4,7 +4,7 @@ import { Section } from "./Section";
 
 export function Work() {
   return (
-    <Section id="work" label="Selected work" title="Every project, given equal weight.">
+    <Section id="work" label=" " title="Projects and Hackathons">
       <ul className="grid gap-px overflow-hidden rounded-sm border border-border bg-border lg:grid-cols-2">
         {projects.map((p, i) => (
           <li key={p.title}>
