@@ -26,14 +26,16 @@ export function BackgroundStage() {
       ))}
       <div className="bg-layer bg-aurora" style={{ opacity: scene === "aurora" ? 1 : 0 }} />
 
-      {/* Legibility scrim — keeps every scene readable */}
+      {/* Legibility scrim — photo scenes need much more damping than abstract ones */}
       <div
-        className="fixed inset-0"
+        className="fixed inset-0 transition-opacity duration-700"
         style={{
           background:
             "linear-gradient(to bottom, oklch(0.145 0 0 / 88%) 0%, oklch(0.145 0 0 / 70%) 34%, oklch(0.145 0 0 / 82%) 72%, oklch(0.145 0 0 / 94%) 100%)",
+          opacity: scene === "aurora" || scene === "blueprint" ? 0.42 : 1,
         }}
       />
+
       <div
         className="fixed inset-0 opacity-[0.035]"
         style={{
