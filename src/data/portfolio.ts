@@ -271,7 +271,7 @@ export const projects: Project[] = [
     linkLabel: "Source",
   },
   {
-    title: " Full ",
+    title: "Full stack Tutoring website",
     blurb: "Live tutoring platform with personalised sessions and resources.",
     stack: ["EdTech", "Tutoring"],
     href: "https://edu-tainment.lovable.app/",
