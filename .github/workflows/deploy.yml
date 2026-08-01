@@ -39,8 +39,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # TanStack Start + Nitro emits static assets here for GitHub Pages upload.
-          path: './.output/public'
+          # TanStack Start prerendered static output for GitHub Pages.
+          path: './dist/client'
 
       - name: Deploy to GitHub Pages
         id: deployment
