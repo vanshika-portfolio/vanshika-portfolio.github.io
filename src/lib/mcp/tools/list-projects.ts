@@ -14,6 +14,10 @@ export default defineTool({
       .optional()
       .describe("Optional keyword filter, e.g. 'python', 'hackathon', 'llm'."),
   },
+  outputSchema: {
+    count: z.number(),
+    projects: z.array(z.record(z.string(), z.unknown())),
+  },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ query }) => {
     const q = query?.toLowerCase();

@@ -1,4 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
+import { z } from "zod";
 import { profile, metrics } from "@/data/portfolio";
 
 export default defineTool({
@@ -7,6 +8,7 @@ export default defineTool({
   description:
     "Get Vanshika Singla's public profile: name, role, location, summary, headline metrics, and public contact/social links.",
   inputSchema: {},
+  outputSchema: { profile: z.record(z.string(), z.unknown()), metrics: z.array(z.record(z.string(), z.unknown())) },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const payload = { profile, metrics };
