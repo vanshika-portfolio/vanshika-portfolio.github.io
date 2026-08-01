@@ -160,7 +160,6 @@ export const projects: Project[] = [
     href: "https://github.com/bohuie/LLMTraining",
     linkLabel: "Source",
   },
-];
 
   {
     title: "Game of Amazons AI Bot",
