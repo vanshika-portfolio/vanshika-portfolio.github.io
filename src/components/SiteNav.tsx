@@ -13,12 +13,32 @@ const links = [
 export function SiteNav() {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string>("");
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = links
+      .map((l) => document.getElementById(l.href.slice(1)))
+      .filter((el): el is HTMLElement => Boolean(el));
+    if (!sections.length || typeof IntersectionObserver === "undefined") return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(`#${visible.target.id}`);
+      },
+      { rootMargin: "-20% 0px -55% 0px", threshold: [0.05, 0.25, 0.5] },
+    );
+    sections.forEach((s) => io.observe(s));
+    return () => io.disconnect();
   }, []);
 
   return (
@@ -45,12 +65,16 @@ export function SiteNav() {
             <a
               key={l.href}
               href={l.href}
-              className="link-underline text-[0.8rem] font-medium tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              aria-current={active === l.href ? "true" : undefined}
+              className={`link-underline text-[0.8rem] font-medium tracking-wide transition-colors ${
+                active === l.href ? "text-gold" : "text-muted-foreground hover:text-foreground"
+              }`}
             >
               {l.label}
             </a>
           ))}
         </div>
+
 
         <button
           type="button"
