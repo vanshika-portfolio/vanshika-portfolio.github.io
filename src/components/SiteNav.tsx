@@ -13,8 +13,7 @@ const icons: Record<SceneId, typeof Circle> = {
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#timeline" },
-  { label: "Highlights", href: "#experience" },
+  { label: "Experience", href: "#experience" },
   { label: "Leadership", href: "#leadership" },
   { label: "Work", href: "#work" },
 
