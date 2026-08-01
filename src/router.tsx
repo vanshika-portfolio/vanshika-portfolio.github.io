@@ -7,10 +7,14 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
+    // Lets the same build work at "/" (Lovable hosting) or at "/repo-name/"
+    // (GitHub Pages project site).
+    basepath: import.meta.env.BASE_URL,
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
   });
+
 
   return router;
 };
