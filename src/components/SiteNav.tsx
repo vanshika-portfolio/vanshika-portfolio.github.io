@@ -3,7 +3,6 @@ import { Menu, X } from "lucide-react";
 import { profile } from "@/data/portfolio";
 
 const links = [
-  { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Leadership", href: "#leadership" },
   { label: "Work", href: "#work" },
