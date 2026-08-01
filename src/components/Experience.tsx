@@ -3,7 +3,7 @@ import { Section } from "./Section";
 
 export function Experience() {
   return (
-    <Section id="experience" label="Experience" title="Industry, government and nonprofit engineering.">
+    <Section id="experience" label="Highlights" title="Professional Highlights">
       <ol className="space-y-px overflow-hidden rounded-sm border border-border bg-border">
         {roles.map((role) => (
           <li key={role.org} className="panel group border-0 px-6 py-8 transition-colors sm:px-8">
