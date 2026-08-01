@@ -6,7 +6,7 @@ export const profile = {
   headline: ["Engineering systems.", "Interpreting data.", "Building for scale."],
   summary:
     "Computer Science and Data Science graduate from UBC. I build reliable backend and data infrastructure — and advise organisations on where automation actually pays off.",
-  email: "vanshikasingla2003@gmail.com",
+  email: "vanshikasingla09@gmail.com",
   github: "https://github.com/PaintedW0lf",
   linkedin: "https://www.linkedin.com/in/vanshika-singla",
   tutoring: "https://edu-tainment.lovable.app/",
