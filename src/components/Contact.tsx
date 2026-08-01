@@ -1,5 +1,6 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { profile } from "@/data/portfolio";
+import { ResumeRequestDialog } from "./ResumeRequest";
 
 export function Contact() {
   return (
