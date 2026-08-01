@@ -4,8 +4,8 @@ import { ResumeRequestDialog } from "./ResumeRequest";
 
 export function Contact() {
   return (
-    <footer id="contact" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28">
-      <div className="hairline-top pt-8">
+    <footer id="contact" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-12 sm:px-8 sm:py-16">
+      <div className="hairline-top pt-6">
         <p className="rule-label">Contact</p>
         <h2 className="mt-4 max-w-2xl text-3xl leading-tight font-semibold sm:text-4xl">
           Let's build something worth shipping.
@@ -25,7 +25,7 @@ export function Contact() {
         </a>
 
 
-        <div className="mt-12 flex flex-wrap items-center gap-3">
+        <div className="mt-10 flex flex-wrap items-center gap-3">
           <a
             href={profile.linkedin}
             target="_blank"
@@ -54,7 +54,7 @@ export function Contact() {
         </div>
 
 
-        <p className="mt-20 text-xs text-muted-foreground/60">
+        <p className="mt-14 text-xs text-muted-foreground/60">
           © {new Date().getFullYear()} {profile.name}
         </p>
       </div>
