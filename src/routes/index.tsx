@@ -4,7 +4,7 @@ import { BackgroundStage } from "@/components/BackgroundStage";
 import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { Timeline } from "@/components/Timeline";
+
 import { Experience } from "@/components/Experience";
 import { Leadership } from "@/components/Leadership";
 import { Work } from "@/components/Work";
