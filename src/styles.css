@@ -228,10 +228,10 @@
 
 @utility bg-aurora {
   background:
-    radial-gradient(56% 44% at 16% 12%, oklch(0.72 0.13 88 / 60%), transparent 68%),
-    radial-gradient(50% 42% at 86% 24%, oklch(0.6 0.11 46 / 55%), transparent 68%),
-    radial-gradient(62% 48% at 48% 94%, oklch(0.52 0.09 104 / 60%), transparent 70%),
-    oklch(0.16 0.006 88);
+    radial-gradient(56% 44% at 16% 12%, oklch(0.5 0.18 300 / 70%), transparent 68%),
+    radial-gradient(50% 42% at 86% 24%, oklch(0.42 0.16 316 / 65%), transparent 68%),
+    radial-gradient(62% 48% at 48% 94%, oklch(0.38 0.14 286 / 68%), transparent 70%),
+    oklch(0.13 0.02 300);
   background-size: 180% 180%;
   animation: aurora-drift 18s ease-in-out infinite alternate;
 }

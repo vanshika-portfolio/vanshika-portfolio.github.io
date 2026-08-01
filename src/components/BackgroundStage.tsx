@@ -1,12 +1,12 @@
-import bgCity from "@/assets/bg-city.jpg";
-import bgNature from "@/assets/bg-nature.jpg";
-import bgBlueprint from "@/assets/bg-blueprint.jpg";
+import bgDunes from "@/assets/bg-dunes.jpg";
+import bgPeaks from "@/assets/bg-peaks.jpg";
+import bgMist from "@/assets/bg-mist.jpg";
 import { useScene } from "./scene-context";
 
 const photo: Record<string, string> = {
-  city: bgCity,
-  nature: bgNature,
-  blueprint: bgBlueprint,
+  dunes: bgDunes,
+  peaks: bgPeaks,
+  mist: bgMist,
 };
 
 export function BackgroundStage() {
@@ -14,7 +14,7 @@ export function BackgroundStage() {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-background">
-      {(["city", "nature", "blueprint"] as const).map((id) => (
+      {(["dunes", "peaks", "mist"] as const).map((id) => (
         <div
           key={id}
           className="bg-layer"
@@ -31,8 +31,8 @@ export function BackgroundStage() {
         className="fixed inset-0 transition-opacity duration-700"
         style={{
           background:
-            "linear-gradient(to bottom, oklch(0.145 0 0 / 88%) 0%, oklch(0.145 0 0 / 70%) 34%, oklch(0.145 0 0 / 82%) 72%, oklch(0.145 0 0 / 94%) 100%)",
-          opacity: scene === "aurora" || scene === "blueprint" ? 0.42 : 1,
+            "linear-gradient(to bottom, oklch(0.13 0.014 300 / 88%) 0%, oklch(0.13 0.014 300 / 68%) 34%, oklch(0.13 0.014 300 / 82%) 72%, oklch(0.13 0.014 300 / 94%) 100%)",
+          opacity: scene === "aurora" ? 0.5 : 1,
         }}
       />
 
