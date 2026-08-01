@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SceneProvider } from "@/components/scene-context";
+
 import { BackgroundStage } from "@/components/BackgroundStage";
 import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/Hero";
