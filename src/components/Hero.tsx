@@ -59,12 +59,12 @@ export function Hero() {
         </a>
       </div>
 
-      <dl className="rise mt-11 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-3 lg:grid-cols-5">
+      <dl className="rise mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-5">
         {metrics.map((m) => (
-          <div key={m.label} className="panel border-0 px-5 py-6">
-            <dd className="font-display text-2xl font-semibold tracking-tight text-gold-bright sm:text-3xl">{m.value}</dd>
-            <dt className="mt-2 text-[0.8rem] font-semibold text-foreground">{m.label}</dt>
-            <p className="mt-0.5 text-xs text-muted-foreground">{m.note}</p>
+          <div key={m.label} className="panel border-0 px-3.5 py-4">
+            <dd className="font-display text-xl font-semibold tracking-tight text-gold-bright sm:text-[1.35rem]">{m.value}</dd>
+            <dt className="mt-1.5 text-[0.7rem] leading-snug font-semibold text-foreground">{m.label}</dt>
+            <p className="mt-0.5 text-[0.65rem] leading-snug text-muted-foreground">{m.note}</p>
           </div>
         ))}
       </dl>
