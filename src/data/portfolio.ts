@@ -13,6 +13,7 @@ export const profile = {
 };
 
 export const metrics = [
+  { value: "Millions", label: "EC2 accounts served", note: "AWS microservice architecture" },
   { value: "4.33", label: "GPA / 4.33", note: "UBC, CS + Data Science" },
   { value: "198", label: "Retail stores", note: "POS rollout QA led" },
   { value: "60%", label: "Downtime cut", note: "via Azure automation " },
